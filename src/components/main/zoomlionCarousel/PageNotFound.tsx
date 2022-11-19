@@ -15,7 +15,7 @@ const PNF404: React.FC<PropsType> = ({ par1, par2 }) => {
 
             <div className={c.pnfTextWrapper}>
                 <p className={c.pnfTitle}>{par1}</p>
-                <p className={c.pnfSubTitle}>{par2}</p>
+                <p className={c.pnfSubTitle}>{par2} </p>
             </div>
         </div>
     )
