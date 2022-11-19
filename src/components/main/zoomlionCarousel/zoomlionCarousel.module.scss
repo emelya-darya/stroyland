@@ -1,0 +1,328 @@
+@import "../../../common styles/_vars.scss";
+
+.zoomlionWr {
+    background-color: $section-grey-bg;
+
+    .zoomlionItemsSlider {
+        padding-bottom: 0px;
+    }
+}
+
+
+
+.zoomLionSlide.zoomLionItemSlide {
+    .slideText {
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 20px;
+
+        .slideName {
+            margin: 0px;
+            height: auto;
+        }
+    }
+}
+
+.zoomLionSlide {
+    padding: 2px;
+    box-sizing: border-box;
+    background-color: transparent;
+
+    &:hover {
+        background-color: rgba($color: $dark-blue, $alpha: .5);
+    }
+
+
+
+
+    .showAll {
+        display: flex;
+        justify-content: center;
+        gap: 7px;
+        align-items: center;
+        padding: 20px 30px;
+        background-color: $dark-blue;
+        color: #fff;
+        font-weight: 500;
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        @media(max-width: 992px) {
+            font-size: 13px;
+            padding: 17px 20px;
+        }
+    }
+
+    .showAll:hover {
+        text-decoration: underline;
+        color: #fff;
+    }
+
+    .slideText {
+        position: relative;
+        z-index: 2;
+        // background-color: rgba($color: $light-blue, $alpha: .5);
+        background-color: #98DAF1;
+        padding: 5px 20px 15px 20px;
+        box-sizing: border-box;
+        text-align: center;
+        // height: 160px;
+        white-space: nowrap;
+
+        @media(max-width:992px) {
+            padding: 5px 20px;
+        }
+
+
+
+        .slideName {
+            margin-bottom: 5px;
+            font-size: 17px;
+            white-space: normal;
+            height: 50px;
+
+            @media(max-width:992px) {
+                font-size: 14px;
+                line-height: 1.4;
+                height: 40px;
+            }
+
+            @media(max-width:500px) {
+                height: 30px;
+            }
+        }
+
+        .slideCharName {
+            font-size: 16px;
+            font-weight: 500;
+
+            @media(max-width:992px) {
+                font-size: 13px;
+                margin: 10px 0px 4px 0px;
+            }
+        }
+
+        .slideCharValue {
+            font-size: 15px;
+
+            @media(max-width:992px) {
+                font-size: 13px;
+                margin: 4px 0px
+            }
+        }
+    }
+
+    .imgWrapper {
+        width: 100%;
+        height: 350px;
+        background-color: #C7C2C7;
+        position: relative;
+        overflow: hidden;
+        // aspect-ratio: 1/.8;
+
+        @media(max-width:992px) {
+            height: 250px;
+        }
+
+        @media(max-width:768px) {
+            height: 200px;
+        }
+
+        @media(max-width:500px) {
+            height: 220px;
+        }
+
+
+        img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+
+.zoomlionBreadcrumbs {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    font-weight: 600;
+    user-select: none;
+    margin-bottom: 15px;
+
+    h3 {
+        margin: 5px 0px;
+    }
+
+    svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    @media(max-width: 576px) {
+        flex-wrap: wrap;
+
+        // h3{
+        //     margin: 5px 0px;
+        // }
+    }
+}
+
+
+.itemWrapper {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+
+    @media(max-width: 768px) {
+        gap: 20px;
+    }
+
+    @media(max-width: 576px) {
+        display: block;
+    }
+
+    .itemPageImgWrapper {
+        position: relative;
+        height: 350px;
+        aspect-ratio: 1/1.3;
+        border: 2px solid rgba($color: $dark-blue, $alpha: .7);
+
+        img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media(max-width: 576px) {
+            float: left;
+            height: 150px;
+            margin-right: 10px;
+        }
+    }
+
+    .itemPageTextCont {
+        flex: 1 1 auto;
+    }
+
+    .itemPageCharsList {
+
+        padding: 0px;
+        list-style: none;
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            // gap: 30px;
+            font-size: 17px;
+            padding: 20px 0px 10px 0px;
+            border-bottom: 1px solid rgba($color: $dark-blue, $alpha: .7);
+
+            @media(max-width: 992px) {
+                font-size: 14px;
+            }
+
+            @media(max-width: 576px) {
+                font-size: 13px;
+                padding: 10px 0px 5px 0px;
+            }
+
+            @media(max-width: 400px) {
+                flex-wrap: wrap;
+                // gap: 0px;
+            }
+        }
+
+        // li:not(:last-child) {
+        //     margin-bottom: 15px;
+        // }
+
+        .charSubtitle {
+            flex: 1 1 auto;
+            font-weight: 600;
+            margin: 0px;
+            display: flex;
+            gap: 7px;
+            align-items: center;
+
+            svg {
+                flex: 0 0 17px;
+            }
+
+
+        }
+
+        .charValue {
+            text-align: right;
+
+            @media(max-width: 400px) {
+                margin-left: auto;
+            }
+        }
+
+    }
+}
+
+.notFound {
+    display: flex;
+    // gap: 30px;
+    align-items: center;
+
+    @media(max-width: 576px) {
+        flex-direction: column-reverse;
+    }
+
+    .pnfImgWrapper {
+        position: relative;
+        height: 350px;
+        aspect-ratio: 2/1;
+
+        @media(max-width: 992px) {
+            height: 200px;
+        }
+
+        @media(max-width: 992px) {
+            height: 150px;
+        }
+
+        img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .pnfTextWrapper {
+
+        text-align: center;
+
+        .pnfTitle {
+            font-weight: 600;
+            font-size: 24px;
+
+            @media(max-width: 576px) {
+                margin: 5px 0px;
+                font-size: 20px;
+            }
+        }
+
+        .pnfSubTitle {
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+}

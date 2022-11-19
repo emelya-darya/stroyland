@@ -1,0 +1,124 @@
+@import "../../common styles/_vars.scss";
+
+
+.header {
+    position: fixed;
+    width: 100vw;
+    height: 80px;
+    background-color: #fff;
+border-bottom: 3px solid rgba($color: $light-blue, $alpha: .4);
+    z-index: 10;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+    height: 100%;
+}
+
+
+
+.logoWrapper {
+    position: relative;
+    align-self: stretch;
+    height: 100%;
+    // min-width: 300px;
+    aspect-ratio: 210/100;
+
+    img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+
+.navList {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+
+    a {
+        display: inline-block;
+        padding: 5px;
+        white-space: nowrap;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    a.active{
+        color: $light-blue;
+    }
+}
+
+.burgerBtn {
+    display: none;
+    border-radius: 0px;
+    background-color: #fff;
+
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba($color: #000000, $alpha: .1);
+    width: 65px;
+    height: 50px;
+    cursor: pointer;
+
+    svg {
+        width: 30px;
+        height: 30px;
+        transform: translate(1px, 3px);
+    }
+
+    @media(max-width:768px) {
+        display: flex;
+        position: relative;
+        z-index: 160;
+    }
+}
+
+.menuWrap {
+
+    nav{
+        
+        @media(max-width: 768px){
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            background-color: rgba($color: #000000, $alpha: .95);
+            height: 100vh;
+            width: 100vw;
+            max-width: 600px;
+            overflow: hidden;
+            z-index: 150;
+            padding-top: 60px;
+            box-sizing: border-box;
+
+            .navList{
+                flex-direction: column;
+                gap: 15px;
+                padding-left: 0px;
+
+                a{
+                    padding: 10px 30px;
+                    width: 100%;
+                    box-sizing: border-box;
+                    color: $light-blue;
+                    transition: .3s;
+                }
+            
+                a.active{
+                    color: $dark-blue;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
