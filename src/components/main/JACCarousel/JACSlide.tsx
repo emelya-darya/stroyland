@@ -21,7 +21,6 @@ const style = {
 }
 
 const JACSlide: React.FC<{ itemData: JACItemType }> = ({ itemData }) => {
-    console.log(itemData)
 
     const [open, setOpen] = React.useState(false)
     const handleOpen = () => setOpen(true)
@@ -100,15 +99,9 @@ const JACSlide: React.FC<{ itemData: JACItemType }> = ({ itemData }) => {
                                 <p className={c.priceTitle}>Цена:</p>
                                 <p className={c.price}>{itemData.price}</p>
                             </div>
-
-
                           
                         </div>
                     </div>
-
-
-
-
 
                     <ul className={`${c.charactersList} ${c.modalCharactersList}`}>
                         {charactersList}

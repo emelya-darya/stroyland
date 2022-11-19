@@ -3,7 +3,7 @@ import { useParams, NavLink } from 'react-router-dom'
 import { ArrowLeftSquare } from 'react-bootstrap-icons'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, A11y } from 'swiper'
+import { Navigation } from 'swiper'
 import 'swiper/scss'
 import 'swiper/scss/navigation'
 import 'swiper/scss/scrollbar'
@@ -53,7 +53,7 @@ const ZoomlionItemsCarousel: React.FC<MapStatePropsType> = ({ zoomlionData }) =>
 
             {currCat
                 ? <Swiper className={`${c.zoomlionItemsSlider} zoomlionSlider`}
-                    modules={[Navigation, A11y]}
+                    modules={[Navigation]}
                     speed={1000} navigation spaceBetween={20} watchSlidesProgress={true}
                     breakpoints={{
                         1: { slidesPerView: 1 },

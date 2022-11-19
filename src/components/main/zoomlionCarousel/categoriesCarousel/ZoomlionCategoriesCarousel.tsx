@@ -1,7 +1,7 @@
 import shortid from 'shortid'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, A11y, Autoplay, Mousewheel, Scrollbar } from 'swiper'
+import { Navigation, Autoplay, Mousewheel, Scrollbar } from 'swiper'
 
 import 'swiper/scss'
 import 'swiper/scss/navigation'
@@ -38,7 +38,7 @@ const ZoomlionCategoriesCarousel: React.FC<PropsType> = ({ zoomlionData }) => {
     return (
         <>
             <Swiper className='zoomlionSlider'
-                modules={[Navigation, A11y, Autoplay, Mousewheel, Scrollbar]}
+                modules={[Navigation, Autoplay, Mousewheel, Scrollbar]}
                 speed={1000} navigation loop mousewheel={true}
                 scrollbar={{ draggable: true }}
                 autoplay={{
